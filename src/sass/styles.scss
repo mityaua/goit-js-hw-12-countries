@@ -9,14 +9,6 @@ html {
 }
 
 body {
-  height: 100%;
-
-  // color: #ffffff;
-
-  // background: url(https://freefrontend.com/assets/img/css-animation-examples/CSS-Dot-Menu-Animations.gif)
-  //   no-repeat center center fixed;
-  // background-size: cover;
-
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
     Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif,
     'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
@@ -36,13 +28,6 @@ img {
 
 // Контейнер с контентом
 .search-container {
-  text-align: center;
-}
-
-// Тайтл
-.title {
-  padding: 0;
-  line-height: 1.1;
   text-align: center;
 }
 

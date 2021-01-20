@@ -13,17 +13,19 @@ const listContainerRef = document.querySelector('.markup-container');
 
 // Слушатель события на интпутах
 inputRef.addEventListener('input', debounce(serchCountries, 500));
-resetRef.addEventListener('click', () => {
-  listContainerRef.innerHTML = '';
-})
+resetRef.addEventListener('click', clearContainer);
 
 // Функция для поиска
 function serchCountries(event) {
   const input = event.target;
   const searchQuery = input.value;
 
-  listContainerRef.innerHTML = '';
+  clearContainer();
 
   fetchCountries(searchQuery).then(updateCountriesList);
 }
 
+// Функция для очистки выдачи
+function clearContainer() {
+  listContainerRef.innerHTML = '';
+}

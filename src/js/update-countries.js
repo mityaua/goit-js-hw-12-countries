@@ -21,6 +21,7 @@ function updateCountriesList(data) {
       type: 'error',
       text: 'Too many matches found. Please enter a more specific query!',
       delay: 3000,
+      maxTextHeight: null,
     });
     return;
   }
