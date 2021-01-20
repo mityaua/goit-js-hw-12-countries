@@ -1,5 +1,4 @@
 // Функция, которая фетчит публичный API, где внутри динамический запрос с инпута
-
 function fetchCounries(searchQuery) {
   return fetch(`https://restcountries.eu/rest/v2/name/${searchQuery}`)
     .then(res => res.json())

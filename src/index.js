@@ -7,11 +7,11 @@ import fetchCountries from './js/fetchCountries';
 import updateCountriesList from './js/update-countries';
 
 // Элементы в DOM
-const inputRef = document.querySelector('.js-input');
+const inputRef = document.querySelector('.search-input');
 const resetRef = document.querySelector('input[type="reset"]');
-const listContainerRef = document.querySelector('.result-container');
+const listContainerRef = document.querySelector('.markup-container');
 
-// Слушатель события на интпуте
+// Слушатель события на интпутах
 inputRef.addEventListener('input', debounce(serchCountries, 500));
 resetRef.addEventListener('click', () => {
   listContainerRef.innerHTML = '';

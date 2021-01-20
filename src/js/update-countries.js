@@ -1,20 +1,12 @@
 // Импорт шаблона для списка стран
 import countriesTpl from '../templates/countries-list.hbs';
 import countryTpl from '../templates/country-item.hbs';
-
-// Нотификация
-import { alert, defaultModules } from '@pnotify/core/dist/PNotify.js';
-import '@pnotify/core/dist/PNotify.css';
-import * as PNotifyMobile from '@pnotify/mobile/dist/PNotifyMobile.js';
-import '@pnotify/mobile/dist/PNotifyMobile.css';
-import '@pnotify/core/dist/BrightTheme.css';
-
-defaultModules.set(PNotifyMobile, {});
+import alert from './notify'
 
 // DOM
-const listContainerRef = document.querySelector('.result-container');
+const listContainerRef = document.querySelector('.markup-container');
 
-// Функция, обновляющая список в DOM
+// Функция, обновляющая выдачу стран в DOM
 function updateCountriesList(data) {
   const markupAll = countriesTpl(data);
   const markupOne = countryTpl(data);

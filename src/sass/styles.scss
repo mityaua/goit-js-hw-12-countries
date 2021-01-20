@@ -11,6 +11,12 @@ html {
 body {
   height: 100%;
 
+  // color: #ffffff;
+
+  // background: url(https://freefrontend.com/assets/img/css-animation-examples/CSS-Dot-Menu-Animations.gif)
+  //   no-repeat center center fixed;
+  // background-size: cover;
+
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
     Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif,
     'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
@@ -22,28 +28,56 @@ li {
   list-style: none;
 }
 
+img {
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
+}
+
+// Контейнер с контентом
 .search-container {
   text-align: center;
 }
 
+// Тайтл
 .title {
   padding: 0;
   line-height: 1.1;
   text-align: center;
 }
 
-.js-input {
+// Инпут
+.search-input {
   height: 35px;
+
   font-size: 1rem;
+  font-weight: 700;
 
   border: 2px solid #e7e2e1;
   border-radius: 5px;
+
+  &::placeholder {
+    font-weight: 500;
+  }
 }
 
-.js-l-list {
+// Список стран
+.js-list {
+  display: contents;
+
+  // Ссылка на элементах списка стран
+  &-link {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+// Списк языков в странах
+.js-languages-list {
   display: contents;
 }
 
+// Кнопка Reset
 .bn632-hover {
   width: 100px;
   margin: 10px;
@@ -82,4 +116,3 @@ li {
   );
   box-shadow: 0 4px 15px 0 rgba(252, 104, 110, 0.75);
 }
-

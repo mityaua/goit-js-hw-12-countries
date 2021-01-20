@@ -1,13 +1,15 @@
 {{#each this}}
 <article>
     <h2>{{name}}</h2>
-    <img src="{{flag}}" alt="{{name}}" title="{{name}}" width="350px">
+    <a href="https://en.wikipedia.org/wiki/{{name}}" rel='noreferrer noopener' target="_blank" >
+        <img src="{{flag}}" alt="{{name}}" title="{{name}} on Wikipedia" width="350px">
+    </a>
     <h3>Capital:</h3>
     <p>{{capital}}</p>
     <h3>Population:</h3>
     <p>{{population}}</p>
     <h3>Languages:</h3>
-    <ul class="js-l-list">
+    <ul class="js-languages-list">
         {{#each languages}}
         <li>
             <p>{{this.name}}</p>
