@@ -9,9 +9,14 @@ html {
 }
 
 body {
+  background: linear-gradient(90deg, #eae3e0 21px, transparent 1%) center,
+    linear-gradient(#e4d9d6 21px, transparent 1%) center, #ca6363;
+  background-size: 22px 22px;
+
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
     Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif,
     'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+    color: #795548;
 }
 
 li {
@@ -28,21 +33,36 @@ img {
 
 // Контейнер с контентом
 .search-container {
+  margin-top: 5rem;
   text-align: center;
+}
+
+.title {
+  margin-top: 0;
 }
 
 // Инпут
 .search-input {
   height: 35px;
+  padding: 15px;
+
+  border: 2px solid #cebcb9;
+  border-radius: 5px;
+
+  color: #d6825e;
+  background-color: #f9efeb;
 
   font-size: 1rem;
   font-weight: 700;
 
-  border: 2px solid #e7e2e1;
-  border-radius: 5px;
-
   &::placeholder {
+    opacity: 0.8;
     font-weight: 500;
+  }
+
+  &:focus {
+    outline: transparent;
+    border: 2px solid #978a88;
   }
 }
 
