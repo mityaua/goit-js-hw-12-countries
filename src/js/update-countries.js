@@ -1,10 +1,8 @@
 // Импорт шаблона для списка стран
 import countriesTpl from '../templates/countries-list.hbs';
 import countryTpl from '../templates/country-item.hbs';
+import  { listContainerRef } from './refs';
 import alert from './notify';
-
-// DOM
-const listContainerRef = document.querySelector('.markup-container');
 
 // Функция, обновляющая выдачу стран в DOM
 function updateCountriesList(data) {

@@ -39,11 +39,13 @@ img {
 
 .title {
   margin-top: 0;
+  margin-bottom: 2rem;
 }
 
 // Инпут
 .search-input {
   height: 35px;
+  margin: 10px 10px 10px 0;
   padding: 15px;
 
   border: 2px solid #cebcb9;
@@ -85,7 +87,6 @@ img {
 // Кнопка Reset
 .bn632-hover {
   width: 100px;
-  margin: 10px;
   height: 35px;
   border: none;
 
