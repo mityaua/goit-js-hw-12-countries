@@ -1,7 +1,7 @@
 // Импорты
 import debounce from 'lodash/debounce';
 import './sass/styles.scss';
-import { inputRef, resetRef, listContainerRef } from './js/refs';
+import { inputRef, resetRef, markupContainerRef } from './js/refs';
 import fetchCountries from './js/fetchCountries';
 import updateCountriesList from './js/update-countries';
 
@@ -17,7 +17,7 @@ function serchCountries(event) {
 
   fetchCountries(searchQuery).then(updateCountriesList);
 
-  // listContainerRef.addEventListener('click', takeSearchResults);
+  // markupContainerRef.addEventListener('click', takeSearchResults);
 }
 
 // Функция для подстановки результатов из выдачи (снять слушатель после отрисовки выше!)
@@ -28,10 +28,10 @@ function serchCountries(event) {
 
 //   fetchCountries(inputRef.value).then(updateCountriesList);
 
-//   listContainerRef.removeEventListener('click', takeSearchResults);
+//   markupContainerRef.removeEventListener('click', takeSearchResults);
 // }
 
 // Функция для очистки выдачи
 function clearContainer() {
-  listContainerRef.innerHTML = '';
+  markupContainerRef.innerHTML = '';
 }

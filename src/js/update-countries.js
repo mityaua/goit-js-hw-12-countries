@@ -1,7 +1,7 @@
 // Импорт шаблона для списка стран
 import countriesTpl from '../templates/countries-list.hbs';
 import countryTpl from '../templates/country-item.hbs';
-import  { listContainerRef } from './refs';
+import { markupContainerRef } from './refs';
 import alert from './notify';
 
 // Функция, обновляющая выдачу стран в DOM
@@ -20,7 +20,7 @@ function updateCountriesList(data) {
   }
 
   if (data.length === 1) {
-    listContainerRef.insertAdjacentHTML('beforeend', markupOne);
+    markupContainerRef.insertAdjacentHTML('beforeend', markupOne);
     return;
   }
 
@@ -34,7 +34,7 @@ function updateCountriesList(data) {
     return;
   }
 
-  listContainerRef.insertAdjacentHTML('beforeend', markupAll);
+  markupContainerRef.insertAdjacentHTML('beforeend', markupAll);
 }
 
 // Экспорт функции во внешний код
