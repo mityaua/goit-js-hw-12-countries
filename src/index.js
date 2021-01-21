@@ -17,19 +17,19 @@ function serchCountries(event) {
 
   fetchCountries(searchQuery).then(updateCountriesList);
 
-  listContainerRef.addEventListener('click', takeSearhResults);
+  // listContainerRef.addEventListener('click', takeSearchResults);
 }
 
-// Функция для подстановки результатов из выдачи
-function takeSearhResults(event) {
-  inputRef.value = event.target.textContent;
+// Функция для подстановки результатов из выдачи (снять слушатель после отрисовки выше!)
+// function takeSearchResults(event) {
+//   inputRef.value = event.target.textContent;
 
-  clearContainer();
+//   clearContainer();
 
-  fetchCountries(inputRef.value).then(updateCountriesList);
+//   fetchCountries(inputRef.value).then(updateCountriesList);
 
-  listContainerRef.removeEventListener('click', takeSearhResults);
-}
+//   listContainerRef.removeEventListener('click', takeSearchResults);
+// }
 
 // Функция для очистки выдачи
 function clearContainer() {
