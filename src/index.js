@@ -34,8 +34,4 @@ function takeSearhResults(event) {
 // Функция для очистки выдачи
 function clearContainer() {
   listContainerRef.innerHTML = '';
-
-  if ((window.location = '#')) {
-    window.history.pushState('page', 'Title', '/');
-  }
 }
