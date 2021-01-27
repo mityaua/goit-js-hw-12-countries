@@ -1,18 +1,21 @@
 // Импорты
-import { inputRef, resetRef, markupContainerRef } from './js/refs';
+import { form, inputRef, resetRef, markupContainerRef } from './js/refs';
 
 import debounce from 'lodash/debounce';
 import './sass/styles.scss';
 import fetchCountries from './js/fetchCountries';
 import updateCountriesList from './js/update-countries';
 
-// Слушатель события на инпутах
+// Слушатели событий на инпутах
 inputRef.addEventListener('input', debounce(searchCountries, 500));
 resetRef.addEventListener('click', clearContainer);
+form.addEventListener('submit', event => {
+  event.preventDefault();
+});
 
 // Функция для поиска
 function searchCountries(event) {
-  event.preventDefault();
+  // event.preventDefault();
 
   const searchQuery = event.target.value;
 
