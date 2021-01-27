@@ -5,12 +5,12 @@ import { inputRef, resetRef, markupContainerRef } from './js/refs';
 import fetchCountries from './js/fetchCountries';
 import updateCountriesList from './js/update-countries';
 
-// Слушатель события на интпутах
-inputRef.addEventListener('input', debounce(serchCountries, 500));
+// Слушатель события на инпутах
+inputRef.addEventListener('input', debounce(searchCountries, 500));
 resetRef.addEventListener('click', clearContainer);
 
 // Функция для поиска
-function serchCountries(event) {
+function searchCountries(event) {
   const searchQuery = event.target.value;
 
   clearContainer();
