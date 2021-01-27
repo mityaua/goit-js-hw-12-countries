@@ -1,7 +1,8 @@
 // Импорты
+import { inputRef, resetRef, markupContainerRef } from './js/refs';
+
 import debounce from 'lodash/debounce';
 import './sass/styles.scss';
-import { inputRef, resetRef, markupContainerRef } from './js/refs';
 import fetchCountries from './js/fetchCountries';
 import updateCountriesList from './js/update-countries';
 
@@ -11,6 +12,8 @@ resetRef.addEventListener('click', clearContainer);
 
 // Функция для поиска
 function searchCountries(event) {
+  event.preventDefault();
+
   const searchQuery = event.target.value;
 
   clearContainer();
