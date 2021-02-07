@@ -33,6 +33,7 @@ function takeSearchResults(event) {
 
   fetchCountries(inputRef.value).then(updateCountriesList);
 
+  inputRef.value = '';
   markupContainerRef.removeEventListener('click', takeSearchResults);
 }
 
