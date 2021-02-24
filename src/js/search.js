@@ -2,6 +2,7 @@ import { form, inputRef, resetRef, markupContainerRef } from './refs';
 import debounce from 'lodash/debounce';
 import fetchCountries from './fetchCountries';
 import updateCountriesList from './update-countries';
+import topbar from 'topbar';
 
 // Слушатели событий на инпутах
 inputRef.addEventListener('input', debounce(searchCountries, 500));
@@ -12,6 +13,8 @@ form.addEventListener('submit', event => {
 
 // Функция для поиска
 function searchCountries(event) {
+  topbar.show();
+
   const searchQuery = event.target.value;
 
   clearContainer();
@@ -19,10 +22,14 @@ function searchCountries(event) {
   fetchCountries(searchQuery).then(updateCountriesList);
 
   markupContainerRef.addEventListener('click', takeSearchResults);
+
+  topbar.hide();
 }
 
 // Функция для подстановки результатов из выдачи
 function takeSearchResults(event) {
+  topbar.show();
+
   if (!event.target.classList.contains('js-list-title')) {
     return;
   }
@@ -35,6 +42,8 @@ function takeSearchResults(event) {
 
   inputRef.value = '';
   markupContainerRef.removeEventListener('click', takeSearchResults);
+
+  topbar.hide();
 }
 
 // Функция для очистки выдачи
